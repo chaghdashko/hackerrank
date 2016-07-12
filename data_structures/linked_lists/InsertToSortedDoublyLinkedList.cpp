@@ -1,6 +1,7 @@
 struct Node {
 	int data;
-	struct Node* next;
+	struct Node * next;
+	struct Node * prev;
 }
 
 Node* SortedInsert(Node *head, int data)
