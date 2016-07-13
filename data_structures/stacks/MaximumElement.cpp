@@ -9,7 +9,6 @@ using namespace std;
 class Stack {
 private:
 	vector<int> v;
-	int stack_max = 0;
 
 public:
 	void push(int data) {
@@ -29,33 +28,4 @@ public:
 
 		return val;
 	}
-
-	int peek() { return *v.end(); }
-
-	int max() { return stack_max; }
 };
-
-int main() {
-	Stack stack;
-
-	int n;
-	cin >> n;
-
-	for (int i = 0; i < n; i++) {
-		int query, param;
-		cin >> query;
-
-		if (query == 1) {
-			cin >> param;
-			stack.push(param);
-		}
-		else if (query == 2) {
-			int val = stack.pop();
-		}
-		else if (query == 3) {
-			cout << stack.max() << endl;
-		}
-	}
-
-	return 0;
-}
