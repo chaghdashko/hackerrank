@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Solution {
+public class Day112DArrays {
     public static void main(String[] args) {
         int arr[][] = new int[6][6];
         int sums[] = new int[16];
