@@ -1,7 +1,9 @@
 #include <iostream>
+#include <ostream>
 
 using namespace std;
 
+#pragma once
 class Box {
 private:
 	int l, b, h;
@@ -31,7 +33,7 @@ public:
 
 	int getHeight() { return this->h; }
 
-	long long CalculateVolume() { return (long long)l * b * h; }
+	long long CalculateVolume() { return (long long) l * b * h; }
 
 	bool operator<(Box &other) {
 		if (l < other.getLength()) {
@@ -50,7 +52,7 @@ public:
 		return false;
 	}
 
-	friend ostream& operator<<(ostream &out, Box &box) {
+	friend std::ostream& operator<<(std::ostream &out, Box &box) {
 		out << box.l << " " << box.b << " " << box.h;
 		return out;
 	}
